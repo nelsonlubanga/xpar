@@ -2,7 +2,7 @@ Package: xpar
 Title: Cross-Species Parentage Assignment for Interspecific Hybrids
 Version: 0.0.0.9000
 Authors@R: 
-    person("Nelson", , , "carrenekwang@gmail.com", role = c("aut", "cre"))
+    person("Nelson", , , "nelsonlubanga@gmail.com", role = c("aut", "cre"))
 Description: Self-calibrated Mendelian trio-consistency testing for
     parentage assignment in interspecific and hybridizing systems, where
     the true genotyping/discordance error rate is estimated empirically
