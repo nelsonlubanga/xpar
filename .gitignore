@@ -4,3 +4,4 @@
 .Ruserdata
 *.Rcheck/
 xpar_*.tar.gz
+inst/doc
