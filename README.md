@@ -51,8 +51,9 @@ plot(boot, top_n = 10)
 
 ## Status
 
-Early development (`0.0.0.9000`). Core trio-consistency engine, empirical
-calibration, block bootstrap, group-constrained re-ranking, and plotting are
-implemented and unit-tested. A simulation-based validation module (planned:
-`AlphaSimR`-backed, varying interspecific divergence / error rate /
-candidate-pool size) is not yet built.
+`0.1.0`. Core trio-consistency engine, empirical calibration, block
+bootstrap, group-constrained re-ranking, and plotting are implemented and
+unit-tested. An `AlphaSimR`-backed simulation/validation module is also
+implemented, sweeping interspecific divergence, genotyping error rate,
+missingness, and candidate-pool size (see `vignette("simulation-validation",
+package = "xpar")`).

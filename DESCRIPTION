@@ -1,8 +1,8 @@
 Package: xpar
 Title: Cross-Species Parentage Assignment for Interspecific Hybrids
-Version: 0.0.0.9000
-Authors@R: 
-    person("Nelson", , , "nelsonlubanga@gmail.com", role = c("aut", "cre"))
+Version: 0.1.0
+Authors@R:
+    person("Nelson", "Lubanga", , "nelsonlubanga@gmail.com", role = c("aut", "cre"))
 Description: Self-calibrated Mendelian trio-consistency testing for
     parentage assignment in interspecific and hybridizing systems, where
     the true genotyping/discordance error rate is estimated empirically
@@ -11,6 +11,8 @@ Description: Self-calibrated Mendelian trio-consistency testing for
     quantification under linkage disequilibrium, and candidate-pair
     ranking by win probability.
 License: MIT + file LICENSE
+URL: https://github.com/nelsonlubanga/xpar
+BugReports: https://github.com/nelsonlubanga/xpar/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 8.0.0
