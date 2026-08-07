@@ -12,3 +12,6 @@
   (`simulate_hybrid_pedigree()`, `inject_noise()`, `run_trial()`,
   `benchmark_grid()`), with a pre-computed simulation study (`sim_study`)
   and accompanying vignette.
+* Fixed `test_vs_reference()` returning `p.value = NA` with a spurious
+  warning when a candidate pair and the reference trio both have zero
+  errors; this degenerate case now returns a clean `p.value = 1`.
