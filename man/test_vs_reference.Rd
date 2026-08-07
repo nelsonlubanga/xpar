@@ -13,10 +13,12 @@ test_vs_reference(candidate, reference, ...)
 \item{reference}{A one-row data frame as returned by
 \code{\link[=calibrate_reference]{calibrate_reference()}} (must contain \code{n_error} and \code{n_called}).}
 
-\item{...}{Passed to \code{\link[stats:prop.test]{stats::prop.test()}}.}
+\item{...}{Passed to \code{\link[stats:prop.test]{stats::prop.test()}}. Ignored in the zero-vs-zero
+case, except for \code{conf.level} (default \code{0.95}).}
 }
 \value{
-The \code{htest} object returned by \code{\link[stats:prop.test]{stats::prop.test()}}.
+An \code{htest} object, as returned by \code{\link[stats:prop.test]{stats::prop.test()}} (or an
+equivalent stub in the zero-vs-zero case).
 }
 \description{
 Two-proportion test (via \code{\link[stats:prop.test]{stats::prop.test()}}) comparing a candidate
@@ -24,4 +26,12 @@ pair's incompatibility rate to the empirical reference rate produced by
 \code{\link[=calibrate_reference]{calibrate_reference()}}. A candidate pair statistically indistinguishable
 from the reference is consistent with being a true parent pair; a rate
 significantly higher than the reference is not.
+}
+\details{
+When both the candidate and the reference have zero errors,
+\code{\link[stats:prop.test]{stats::prop.test()}} degenerates (\code{NaN} statistic, \code{NA} p-value, with a
+spurious "Chi-squared approximation may be incorrect" warning) because
+the pooled proportion is exactly 0. That case — a candidate matching the
+reference perfectly — is unambiguous evidence of no difference, so it is
+short-circuited to a p-value of \code{1} instead.
 }
